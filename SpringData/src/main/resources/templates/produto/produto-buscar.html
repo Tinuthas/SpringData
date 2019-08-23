@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Procurar Produto</title>
+</head>
+<body>
+<form action="/produto/buscar" method="post">
+    <input type="text" name="id" placeholder="Digite o id">
+    <input type="submit" value="Salvar">
+</form>
+
+    <div th:if="${prod != null}">
+        <p  th:text="${prod.nome != null} ? ${prod.nome} : ''"></p>
+        <p th:text="${prod.preco != 0} ? ${prod.preco} : ''"></p>
+
+    </div>
+   </body>
+</html>
